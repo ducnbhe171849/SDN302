@@ -1,0 +1,24 @@
+@import "tailwindcss";
+
+@layer components {
+  .align-items {
+    @apply mx-auto max-w-6xl px-8;
+  }
+}
+
+@plugin "daisyui" {
+  themes: light --default, dark --prefersdark, luxury, valentine;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 15s linear infinite;
+}
